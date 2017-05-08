@@ -21,3 +21,11 @@ Usage
 ```
 
 * Report(Xml and Html) will be generated on build folder
+
+Integrate with Jenkins
+-----------
+* Install essential plugin to publish report
+    * Gradle plugin
+    * HTML Publisher plugin
+    * Jacoco plugin
+    * JUnit plugin
