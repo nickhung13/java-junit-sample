@@ -1,0 +1,36 @@
+group 'com.loockcafe'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jacoco {
+    toolVersion = "0.7.6.201602180812"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
+jacocoTestReport {
+    reports {
+        xml{
+            enabled true
+            destination "${buildDir}/jacoco.xml"
+        }
+        csv.enabled false
+        html{
+            enabled true
+            html.destination "${buildDir}/jacocoHtml"
+        }
+
+
+    }
+}
