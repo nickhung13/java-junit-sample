@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 
 /**
  * Created by nickhung on 2017/5/8.
+ * Add a new comment 
  */
 public class CalculatorTest {
     private Calculator cal;
